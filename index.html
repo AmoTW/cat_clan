@@ -1,19 +1,80 @@
 <!DOCTYPE html>
+<!-- 宣告這是一個 HTML5 的文件類型 -->
+
 <html lang="zh-TW">
+<!-- 網頁的起點，並設定主要語言為繁體中文 -->
+
 <head>
+<!-- 網頁的「腦袋」，用來放置設定資訊、標題和樣式 -->
+
     <meta charset="UTF-8">
+    <!-- 設定網頁編碼為 UTF-8，防止中文出現亂碼 -->
+
     <title>CAT Clan</title>
+    <!-- 將網頁標題固定修改為 CAT Clan -->
+
     <style>
-        /* 控制整個網頁畫面 */
+    /* 開始編寫 CSS 樣式表，用來控制網頁的外觀 */
+
         html, body {
+        /* 選取最外層的網頁標籤 */
+
             margin: 0;
+            /* 清除網頁預設的外邊距，確保不會出現奇怪的白邊 */
+
             padding: 0;
+            /* 清除網頁預設的內襯距離 */
+
             width: 100%;
-            height: 100%;
-            background-color: #000000; /* 設定為純黑色 */
+            /* 讓網頁基礎寬度填滿瀏覽器 */
+
+            background-color: #000000;
+            /* 將整個網頁的底色設定為純黑色 */
         }
+        /* 結束基礎設定 */
+
+        .scroll-box {
+        /* 建立一個叫做 scroll-box 的類別樣式（用來撐開網頁高度） */
+
+            width: 100%;
+            /* 讓這個區塊的寬度填滿畫面 */
+
+            height: 200vh;
+            /* vh 代表視窗高度，200vh 代表這個區塊有「兩個螢幕高」，是能捲動的關鍵 */
+
+            background: linear-gradient(to bottom, #000000, #222222);
+            /* 製作一個從純黑漸層到深灰色的背景，捲動時比較明顯 */
+
+            display: flex;
+            /* 使用彈性佈局，方便讓裡面的文字置中 */
+
+            justify-content: center;
+            /* 讓裡面的文字水平置中 */
+
+            align-items: center;
+            /* 讓裡面的文字垂直置中 */
+
+            color: #ffffff;
+            /* 將文字顏色設定為純白色 */
+
+            font-size: 24px;
+            /* 設定文字大小為 24 像素 */
+
+            font-family: Arial, sans-serif;
+            /* 設定文字字體 */
+        }
+        /* 結束捲動區塊的設定 */
     </style>
 </head>
+<!-- 網頁的「腦袋」設定結束 -->
 <body>
-    </body>
+<!-- 網頁的「身體」，放實際內容的地方 -->
+    <div class="scroll-box">
+    <!-- 建立一個區塊，套用剛剛寫好的 scroll-box 樣式 -->
+        <!-- 顯示在畫面中央的提示文字 -->
+    </div>
+    <!-- 結束這個區塊 -->
+</body>
+<!-- 網頁的「身體」結束 -->
 </html>
+<!-- 整個 HTML 網頁文件的終點 -->
