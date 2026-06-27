@@ -1,8 +1,18 @@
 <!DOCTYPE html>
+<!-- 宣告這是一個 HTML5 的文件類型 -->
+
 <html lang="zh-TW">
+<!-- 網頁的起點，並設定主要語言為繁體中文 -->
+
 <head>
-<meta charset="UTF-8">
+<!-- 網頁的「腦袋」，用來放置設定資訊、標題和樣式 -->
+
+    <meta charset="UTF-8">
+    <!-- 設定網頁編碼為 UTF-8，防止中文出現亂碼 -->
+
     <title>CAT Clan</title>
+    <!-- 將網頁標題固定修改為 CAT Clan -->
+
     <style>
     /* 開始編寫 CSS 樣式表，用來控制網頁的外觀 */
 
@@ -16,51 +26,64 @@
             /* 清除網頁預設的內襯距離 */
 
             width: 100%;
-            /* 讓網頁基礎寬度填滿瀏覽器視窗 */
-
-            height: 100%;
-            /* 讓網頁基礎高度填滿瀏覽器視窗 */
+            /* 讓網頁基礎寬度填滿瀏覽器 */
 
             background-color: #000000;
             /* 將整個網頁的底色設定為純黑色 */
-
-            display: flex;
-            /* 使用彈性佈局，這是讓裡面內容置中的關鍵 */
-
-            justify-content: center;
-            /* 讓裡面的元素水平置中 */
-
-            align-items: center;
-            /* 讓裡面的元素垂直置中 */
         }
         /* 結束基礎設定 */
 
-        .center-box {
-        /* 建立一個叫做 center-box 的類別樣式（我們的小區域） */
+        .scroll-box {
+        /* 建立一個叫做 scroll-box 的類別樣式（用來撐開網頁高度） */
 
-            width: 150px;
-            /* 設定這個直立小區域的寬度 */
+            width: 100%;
+            /* 讓這個區塊的寬度填滿畫面 */
 
-            height: 300px;
-            /* 設定這個直立小區域的高度，使其呈現直立長方形 */
+            height: 200vh;
+            /* vh 代表視窗高度，200vh 代表這個區塊有「兩個螢幕高」，是能捲動的關鍵 */
 
-            background-color: rgba(255, 255, 255, 0.2);
-            /* 設定半透明背景色：白色 (255,255,255)，透明度 (Alpha) 為 0.2 */
+            background: linear-gradient(to bottom, #000000, #222222);
+            /* 製作一個從純黑漸層到深灰色的背景，捲動時比較明顯 */
 
-            border-radius: 8px;
-            /* （可選）給小區域加上輕微的圓角，使其看起來更精緻 */
+            display: flex;
+            /* 使用彈性佈局，方便讓裡面的文字置中 */
 
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-            /* （可選）加上一個淡淡的陰影，增加立體感 */
+            justify-content: center;
+            /* 讓裡面的文字水平置中 */
+
+            align-items: center;
+            /* 讓裡面的文字垂直置中 */
+
+            color: #ffffff;
+            /* 將文字顏色設定為純白色 */
+
+            font-size: 24px;
+            /* 設定文字大小為 24 像素 */
+
+            font-family: Arial, sans-serif;
+            /* 設定文字字體 */
         }
-        /* 結束小區域的設定 */
+        /* 結束捲動區塊的設定 */
 
     </style>
     /* CSS 樣式表結束 */
 
 </head>
+<!-- 網頁的「腦袋」設定結束 -->
+
 <body>
-<div class="center-box">
+<!-- 網頁的「身體」，放實際內容的地方 -->
+
+    <div class="scroll-box">
+    <!-- 建立一個區塊，套用剛剛寫好的 scroll-box 樣式 -->
+
+        <!-- 顯示在畫面中央的提示文字 -->
+
     </div>
-    </body>
+    <!-- 結束這個區塊 -->
+
+</body>
+<!-- 網頁的「身體」結束 -->
+
 </html>
+<!-- 整個 HTML 網頁文件的終點 -->
